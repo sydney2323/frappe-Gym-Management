@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:gym_member",
+ "autoname": "GYM-.###",
  "creation": "2023-02-17 22:37:27.578754",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,9 +10,8 @@
  "field_order": [
   "gym_member",
   "full_name",
-  "from",
-  "to",
-  "paid"
+  "from_date",
+  "to_date"
  ],
  "fields": [
   {
@@ -21,8 +20,7 @@
    "in_list_view": 1,
    "label": "Gym Member",
    "options": "Gym Member",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "full_name",
@@ -30,35 +28,27 @@
    "label": "Full Name"
   },
   {
-   "fieldname": "from",
+   "fieldname": "from_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "From",
+   "label": "From Date",
    "reqd": 1
   },
   {
-   "fieldname": "to",
+   "fieldname": "to_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "To",
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "paid",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Paid",
+   "label": "To Date",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-17 22:41:35.861290",
+ "modified": "2023-02-18 05:04:56.200059",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
