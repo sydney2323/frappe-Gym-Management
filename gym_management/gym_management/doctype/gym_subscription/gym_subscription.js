@@ -2,37 +2,32 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Gym Subscription", {
-	refresh(frm) {
-
-        frappe.call('gym_management.gym_management.doctype.gym_subscription_plan.gym_subscription_plan.my_method', {
-            plan: frm.doc.plan
-        }).then(r => {
-            // console.log(r.message)
-            if (frm.doc.plan == 'Daily') {
-
-                frm.set_value('fee', r.message);
-
-            } else if (frm.doc.plan == 'Weekly') {
-
-                fee = r.message * 7
-                frm.set_value('fee', fee);
-
-            } else if (frm.doc.plan == 'Monthly') {
+    plan: function (frm) {
+        frappe.call({
+            method: 'gym_management.gym_management.doctype.gym_subscription.gym_subscription.get_subscription_plan_fee',
+            args: {
+                'doctype': 'Gym Subscription Plan',
+                'plan': frm.doc.plan,
+            },
+            callback: function(r) {
+                console.log(r.message);
                 
-                fee = r.message * 30
-                frm.set_value('fee', fee);
-
-            } else{
-
-                fee = r.message * 360
-                frm.set_value('fee', fee);
-                
+                if (frm.doc.plan == 'Daily') {
+                    frm.set_value('fee', r.message);
+                } else if (frm.doc.plan == 'Weekly') {
+                    var fee = r.message * 7;
+                    frm.set_value('fee', fee);
+                } else if (frm.doc.plan == 'Monthly') {
+                    var fee = r.message * 30;
+                    frm.set_value('fee', fee);
+                } else{
+                    var fee = r.message * 360;
+                    frm.set_value('fee', fee);
+                }
             }
         });
-
-	},
-
-    
-
+    },
 });
+
+
 

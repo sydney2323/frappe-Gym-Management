@@ -7,3 +7,8 @@ from frappe.model.document import Document
 class GymSubscription(Document):
 	pass
 
+@frappe.whitelist()
+def get_subscription_plan_fee(plan, doctype):
+	fee = frappe.db.get_value(doctype, plan, 'fee')
+	return fee
+
