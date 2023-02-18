@@ -7,20 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "full_names",
+  "id",
   "contacts",
   "sex",
   "address",
   "phone_number"
  ],
  "fields": [
-  {
-   "fieldname": "full_names",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Full Names",
-   "reqd": 1
-  },
   {
    "fieldname": "contacts",
    "fieldtype": "Data",
@@ -48,11 +41,19 @@
    "fieldtype": "Data",
    "label": "Phone Number",
    "reqd": 1
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ID",
+   "options": "User",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-06 11:57:45.911901",
+ "modified": "2023-02-18 17:21:52.959875",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer",
