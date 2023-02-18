@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:id",
  "creation": "2023-02-06 10:52:48.185873",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "id",
   "plan",
   "type",
   "fee"
@@ -32,14 +34,23 @@
    "fieldtype": "Select",
    "label": "Type",
    "options": "Daily\nWeekly\nMonthly\nAnnual"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-07 17:13:18.672075",
+ "modified": "2023-02-18 14:02:46.680808",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Subscription",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
