@@ -18,9 +18,10 @@
  "fields": [
   {
    "fieldname": "full_names",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Full Names",
+   "options": "User",
    "reqd": 1,
    "unique": 1
   },
@@ -62,7 +63,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-17 22:22:48.972696",
+ "modified": "2023-02-18 05:21:50.530387",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
