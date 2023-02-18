@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:full_name",
+ "autoname": "CLB-.###",
  "creation": "2023-02-07 17:29:06.043253",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,27 +9,16 @@
  "engine": "InnoDB",
  "field_order": [
   "full_name",
-  "starting_date",
-  "ending_date",
   "class"
  ],
  "fields": [
   {
    "fieldname": "full_name",
-   "fieldtype": "Link",
-   "label": "Full Name",
-   "options": "User",
+   "fieldtype": "Data",
+   "label": "U",
+   "options": "full_name",
+   "read_only": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "starting_date",
-   "fieldtype": "Date",
-   "label": "Starting Date"
-  },
-  {
-   "fieldname": "ending_date",
-   "fieldtype": "Date",
-   "label": "Ending Date"
   },
   {
    "fieldname": "class",
@@ -40,11 +29,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-07 17:51:28.566213",
+ "modified": "2023-02-18 06:29:53.861840",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Class Booking",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
